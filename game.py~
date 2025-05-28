@@ -46,6 +46,7 @@ class Game:
         self.player = player
         self.computer = computer
 
+    while truth
     def start(self):
         while self.player.is_alive() and self.computer.is_alive():
             self.player.attack(self.computer)
@@ -54,14 +55,8 @@ class Game:
             self.computer.attack(self.player)
             print(f"{self.computer.name} атакует {self.player.name} и наносит {self.computer.attack_power} урона.")
             print(f"{self.player.name} осталось {self.player.health} здоровья.")
+
         if self.player.is_alive():
             print(f"Победил {self.player.name}!")
         else:
             print(f"Победил {self.computer.name}!")
-
-player = Hero("Игрок")
-computer = Hero("Компьютер")
-game = Game(player, computer)
-game.start()
-
-
